@@ -23,7 +23,7 @@ public class SimuladosController {
 
     @RequestMapping("/welcome")
     public ModelAndView helloWorld() {
-        return new ModelAndView("redirect:pages/index.jsp");
+        return new ModelAndView("/home");
     }
 
     @RequestMapping(value = "/realizarSimulado")
@@ -66,7 +66,7 @@ public class SimuladosController {
         model.addAttribute("listaQuestao", listaQuestao);
         mav.addObject(model);
 
-        return "index";
+        return "simulado";
 
     }
 
